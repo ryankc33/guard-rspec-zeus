@@ -1,28 +1,50 @@
-== README
+Error log
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+    04:03:37 - INFO - Guard::RSpec is running
+    04:03:37 - INFO - Guard is now watching at '/Users/macintosh/rails_projects/guard-rspec-zeus'
+    04:03:51 - INFO - Running: spec/models/user_spec.rb 
 
-Things you may want to cover:
+    Finished in 0.03377 seconds (files took 29.76 seconds to load)
+    1 example, 0 failures
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+    04:03:58 - INFO - Running: spec/models/user_spec.rb
+    04:03:58 - ERROR - Guard::RSpec failed to achieve its <run_on_modifications>, exception was:
+    zeus/tmp/rspec_results
+    results.rb:11:in `readlines'
+    results.rb:11:in `initialize'
+    rspec_process.rb:46:in `new'
+    rspec_process.rb:46:in `_read_results'
+    rspec_process.rb:17:in `initialize'
+    runner.rb:68:in `new'
+    runner.rb:68:in `_really_run'
+    runner.rb:57:in `_run'
+    runner.rb:41:in `run'
+    rb:42:in `block in run_on_modifications'
+    rb:48:in `_throw_if_failed'
+    rb:42:in `run_on_modifications'
+    rb:82:in `block in _supervise'
+    rb:79:in `catch'
+    rb:79:in `_supervise'
+    rb:61:in `block (3 levels) in run_on_changes'
+    rb:56:in `each'
+    rb:56:in `block (2 levels) in run_on_changes'
+    rb:119:in `block (2 levels) in _run_group_plugins'
+    rb:117:in `each'
+    rb:117:in `block in _run_group_plugins'
+    rb:116:in `catch'
+    rb:116:in `_run_group_plugins'
+    rb:54:in `block in run_on_changes'
+    rb:53:in `each'
+    rb:53:in `run_on_changes'
+    .rb:23:in `process'
+    rb:43:in `start'
+    environments/valid.rb:16:in `start_guard'
+    rb:122:in `start'
+    `run'
+    rb:126:in `invoke_command'
+    `dispatch'
+    `start'
+    rb:32:in `execute'
+    rb:19:in `execute!'
+    main>'
+    04:03:58 - INFO - Guard::RSpec has just been fired
